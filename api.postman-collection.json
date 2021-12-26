@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "0ec66c94-c8b3-4826-a235-a241b47e29ee",
+		"name": "Lusha Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create character",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://anapioficeandfire.com/api/characters/583\",\n    \"name\": \"Jon Snow\",\n    \"gender\": \"Male\",\n    \"culture\": \"Northmen\",\n    \"born\": \"In 283 AC\",\n\t\"died\": false,\n    \"titles\": [\n        \"Lord Commander of the Night's Watch\"\n    ],\n    \"aliases\": [\n        \"Lord Snow\",\n        \"Ned Stark's Bastard\",\n        \"The Snow of Winterfell\",\n        \"The Crow-Come-Over\",\n        \"The 998th Lord Commander of the Night's Watch\",\n        \"The Bastard of Winterfell\",\n        \"The Black Bastard of the Wall\",\n        \"Lord Crow\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/characters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create house",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://anapioficeandfire.com/api/houses/378\",\n\t\"name\": \"House Targaryen of King's Landing\",\n\t\"region\": \"The Crownlands\",\n\t\"coatOfArms\": \"Sable, a dragon thrice-headed gules\",\n\t\"words\": \"Fire and Blood\",\n\t\"titles\": [\n\t\t\"King of the Andals, the Rhoynar and the First Men\",\n\t\t\"Lord of the Seven Kingdoms\",\n\t\t\"Prince of Summerhall\"\n\t],\n\t\"seats\": [\n\t\t\"Red Keep (formerly)\",\n\t\t\"Summerhall (formerly)\"\n\t],\n\t\"currentLord\": \"https://anapioficeandfire.com/api/characters/1303\",\n    \"image\": \"House Targaryen\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/houses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "backend - alive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get character",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/characters/61b754c21f1df280d16e0edf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters",
+						"61b754c21f1df280d16e0edf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get house",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/houses/61b719394a11702b2683d612",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses",
+						"61b719394a11702b2683d612"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update character",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"died\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/characters/61b754c21f1df280d16e0edf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters",
+						"61b754c21f1df280d16e0edf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update house",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"words\": \"Fire and Blood\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/houses/61b719394a11702b2683d612",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses",
+						"61b719394a11702b2683d612"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Tutorials which title contains 'some value' in key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/characters?name=Snow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Snow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all Houses which name contains 'some value' in key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/houses?name=House",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "House"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all died Characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/characters/died",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters",
+						"died"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete character",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/characters/61b620761871d6aa3099a9b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters",
+						"61b620761871d6aa3099a9b8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete house",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/houses/61b719394a11702b2683d612",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses",
+						"61b719394a11702b2683d612"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all characters",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/characters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all houses",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/houses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/characters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all houses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/houses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"houses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "backend-app",
+  "author": "oren raz",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "debug": "node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "mongoose": "^6.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "supertest": "^6.1.6"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api",
+    "mongodb"
+  ]
+}
