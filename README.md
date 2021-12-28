@@ -16,7 +16,7 @@ from the root folder (LushaLive) run the compose.sh script
 it will create 2 dockers with mongoDB and the backend app  
   
 #### Seed DB  
-this will seed the DB with predefined 9 houses data   
+this will seed the DB with predefined 9 houses data & 40 characters 
   
 ```bash  
 cd backend  
