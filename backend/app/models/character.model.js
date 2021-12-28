@@ -12,8 +12,7 @@ module.exports = mongoose => {
             }],
             aliases: [{
                 type: String
-            }],
-            currentLord: String
+            }]
         },
         { timestamps: true }
     );

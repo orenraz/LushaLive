@@ -1,6 +1,7 @@
 require('dotenv').config();
 const db = require('./app/models');
 const mockHouses = require('./mock/houses');
+const mockCharacters = require('./mock/characters');
 
 db.mongoose
     .connect(db.url, {
@@ -10,10 +11,13 @@ db.mongoose
     .then(() => {
         console.log('Connected to the database!');
         const seedDB = async () => {
+            await db.characters.deleteMany({});
+            await db.characters.insertMany(mockCharacters);
             await db.houses.deleteMany({});
             await db.houses.insertMany(mockHouses);
         }
         seedDB().then(() => {
+            console.log('DB seeded, closing connection');
             db.mongoose.connection.close();
         })
     })
