@@ -85,5 +85,4 @@ fetch should be asynchronous, and by order - the order will be set by their inde
 - implement cache when fetching data from houses/characters with 30 sec TTL  
 - implement unit tests  
 - implement end-to-end tests
-- use logger  
-- api returns 500 when data not found, return 400
+- implement pagination when fetching characters
