@@ -1,4 +1,8 @@
 # Lusha Live App  
+- This is a live coding exercise.
+- start the server & client
+- fix the issues until server & client are running - see "fix initial issues" section
+- start implementing tasks from the back-end & client task list section
   
 ## Requirements  
   
@@ -48,6 +52,11 @@ create a new connection:
   
   
 ## Tasks list  
+
+### fix initial issues
+- fix cors issue
+- fix greedy express route in health.routes
+- shut down the backend and navigate to houses page. handle the unhandled exception.
   
 ### client 
 - when selecting a house from houses page:  
@@ -71,7 +80,6 @@ fetch should be asynchronous, and by order - the order will be set by their inde
 - instead of using the Context to fetch selectedHouse in house page, change the code so that clicking on a house will redirect to /house/{id} and then pull the data from the context.
   
 ### back-end 
-- fix cors issue
 - add schema validation on DB  
 - add schema validation on controller  
 - implement cache when fetching data from houses/characters with 30 sec TTL  
