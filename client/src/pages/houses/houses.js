@@ -11,15 +11,14 @@ const Houses = () => {
     const { setSelectedHouse, houses, setHouses } = useContext(AppContext);
     const [photos, setPhotos] = useState([]);
 
-    const getHouses = () => {
-        fetch(`${BASE_URL}/api/houses`)
-            .then(response => response.json())
-            .then(data => {setHouses(data)});
-    }
-
     useEffect(() => {
+        const getHouses = () => {
+            fetch(`${BASE_URL}/api/houses`)
+                .then(response => response.json())
+                .then(data => {setHouses(data)});
+        }
         getHouses();
-    }, []);
+    }, [setHouses]);
 
     useEffect(() => {
         setPhotos(houses.map((house, index) => {
