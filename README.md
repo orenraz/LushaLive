@@ -77,6 +77,7 @@ fetch should be asynchronous, and by order - the order will be set by their inde
   - fetch character from backend - use pagination and display 10 characters per page.
   - handle character not found flow.  
 - refactor API calls - create a dedicated place to handle http client requests. 
+- refactor the layout so router will not be inside RightNav component
 - instead of using the Context to fetch selectedHouse in house page, change the code so that clicking on a house will redirect to /house/{id} and then pull the data from the context.
   
 ### back-end 
